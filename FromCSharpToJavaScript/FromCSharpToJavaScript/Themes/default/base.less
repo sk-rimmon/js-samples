@@ -1,0 +1,48 @@
+﻿@import "theme.less";
+
+.box-sizing() {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clickable() {
+    cursor: pointer;
+}
+
+.no-opacity() {
+    opacity: 1;
+    filter: none;
+}
+
+.text-bold() {
+    font-weight: 700;
+}
+
+.text-normal() {
+    font-weight: 400;
+}
+
+@default-border-radius: 0.4em;
+
+.border(@color: @border-color, @width: 1px, @style: solid) when (isColor(@color)) and (isnumber(@width)) {
+    border: @style @width @color;
+}
+
+.border-radius(@radius: @default-border-radius) when (isnumber(@radius)) {
+    border-radius: @radius;
+}
+
+.border-bottom-radius(@radius: @default-border-radius) when (isnumber(@radius)) {
+    border-bottom-right-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+
+.border-top-radius(@radius: @default-border-radius) when (isnumber(@radius)) {
+    border-top-right-radius: @radius;
+    border-top-left-radius: @radius;
+}
+
+.space-top(@size: 1em) when (isnumber(@size)) {
+    margin-top: @size;
+}
