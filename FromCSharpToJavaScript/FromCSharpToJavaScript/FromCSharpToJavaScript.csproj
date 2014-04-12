@@ -105,10 +105,23 @@
     <Compile Include="Application\MvcApplication.cs" />
     <Compile Include="Application\MvcApplicationController.cs" />
     <Compile Include="Application\Routes.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LearningController.cs" />
+    <Compile Include="Controllers\TestExamplesController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\components\calculator.js" />
+    <Content Include="Scripts\jasmine-sample\boot.js" />
+    <Content Include="Scripts\jasmine-sample\calculator.tests.js" />
+    <Content Include="Scripts\jasmine-sample\console.js" />
+    <Content Include="Scripts\jasmine-sample\jasmine-html.js" />
+    <Content Include="Scripts\jasmine-sample\jasmine.js" />
+    <Content Include="Scripts\learning\basics.js" />
+    <Content Include="Scripts\learning\console-init.js" />
+    <Content Include="Scripts\learning\donts.js" />
+    <Content Include="Scripts\learning\console.js" />
+    <Content Include="Scripts\qunit-sample\calculator.tests.js" />
+    <Content Include="Scripts\qunit-sample\qunit-1.14.0.js" />
     <Content Include="Themes\default\base.css">
       <DependentUpon>base.less</DependentUpon>
     </Content>
@@ -120,9 +133,12 @@
     <Content Include="Themes\default\bootstrap.min.css">
       <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
+    <Content Include="Themes\default\jasmine\jasmine.css" />
     <Content Include="Themes\default\pages.css">
       <DependentUpon>pages.less</DependentUpon>
     </Content>
+    <Content Include="Themes\default\qunit\qunit-1.14.0.css" />
+    <Content Include="Themes\default\qunit\qunit-theme-ninja.css" />
     <Content Include="Themes\default\reset.css">
       <DependentUpon>reset.less</DependentUpon>
     </Content>
@@ -176,7 +192,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Learning\Index.cshtml" />
     <Content Include="Scripts\jquery-2.1.0.min.map">
       <DependentUpon>jquery-2.1.0.js</DependentUpon>
     </Content>
@@ -184,6 +200,8 @@
     <Content Include="Themes\default\reset.less" />
     <Content Include="Themes\default\base.less" />
     <Content Include="Themes\default\pages.less" />
+    <Content Include="Views\TestExamples\QUnit.cshtml" />
+    <Content Include="Views\TestExamples\Jasmine.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

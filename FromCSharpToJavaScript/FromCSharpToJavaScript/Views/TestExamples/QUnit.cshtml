@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Tests samples - QUnit";
+}
+<h1>QUnit</h1>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+@section styles
+{
+    @Styles.Render("~/themes/default/qunit")
+}
+@section scripts
+{
+    @Scripts.Render("~/js/qunit")
+}

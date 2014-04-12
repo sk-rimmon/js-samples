@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/themes/default")
+    @RenderSection("styles", required: false)
 </head>
-    <body>
+    <body class="container-fluid">
         @RenderBody()
         @Scripts.Render("~/js/jquery")
         @Scripts.Render("~/js/bootstrap")

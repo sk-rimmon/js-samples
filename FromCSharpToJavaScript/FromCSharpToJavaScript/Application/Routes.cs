@@ -17,9 +17,11 @@ namespace FromCSharpToJavaScript
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(name: "Default", url: "{controller}/{action}/{id}", defaults: new
             {
-                controller = "Home",
+                controller = "Learning",
                 action = "Index",
                 id = UrlParameter.Optional
             });
