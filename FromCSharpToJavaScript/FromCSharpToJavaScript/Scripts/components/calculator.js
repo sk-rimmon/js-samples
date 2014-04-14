@@ -1,6 +1,9 @@
 ﻿(function (window, sample) {
     'use strict';
 
+    // A simple Calculator module representing some testable business module.
+    // Contains only two methods Add and Multiply and it's working only with whole numbers but the functionality it's not important.
+    // More important is that we have an unit with custom logic for testing.
     var Calculator = function () { };
 
     Calculator.prototype.add = function (a, b) {

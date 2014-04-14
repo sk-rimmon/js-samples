@@ -1,6 +1,12 @@
 ﻿(function (window, $) {
     'use strict';
 
+    // Helper console for displaying output to given HTML element and also to the console in developer tools.
+    // Written as a jQuery plugin:
+    // - you can attach console output to the every element like <pre> or <textarea>
+    // - you can easily access console.
+    // - you can select all console elements via custom jQuery selector.
+
     var oldConsole = window.console,
         oldDebug = oldConsole ? (oldConsole.debug || $.noop) : $.noop; // IE doesn't have console.debug.
 
@@ -37,6 +43,9 @@
         }
     });
 
+    // usage:
+    // getter: if element doesn't have console object, creates it at store it to the element's data
+    // setter: if element already has console object, return it.
     $.fn.console = function () {
         // getter mode
         var current = $(this).data('output-console');
@@ -55,6 +64,7 @@
         });
     };
 
+    // custom jQuery selector to easily get all console elements from current DOM.
     $.expr[':'].console = function (obj) {
         // return $(obj).data('output-console'); will be slower than selecting through class.
         return $(obj).hasClass('output-console');

@@ -1,4 +1,6 @@
-﻿(function (window, sample, undefined) {
+﻿// BASIC OVERVIEW OF JAVASCRIPT:
+
+(function (window, sample, undefined) {
     'use strict'; // always code in strict mode. this mode applies to the whole function's scope.
 
     // ---------

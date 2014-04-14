@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-//  <copyright file="LearningController.cs" author="Rimmon">
+//  <copyright file="HomeController.cs" author="Rimmon">
 //      Copyright (c) Rimmon All rights reserved.
 //  </copyright>
 // -----------------------------------------------------------------------
@@ -8,8 +8,7 @@ namespace FromCSharpToJavaScript.Controllers
 {
     using System.Web.Mvc;
 
-    [RoutePrefix("learning")]
-    public class LearningController : MvcApplicationController
+    public class HomeController : MvcApplicationController
     {
         #region Public Methods
 

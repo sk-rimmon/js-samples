@@ -1,5 +1,5 @@
-﻿/// <reference path="jasmine.js"/>
-/// <reference path="../components/calculator.js"/>
+﻿/// <reference path="../jasmine/jasmine.js"/>
+/// <reference path="calculator.js"/>
 
 // calculator tests written in jasmine.
 // how to run:

@@ -1,4 +1,4 @@
-﻿// THINGS TO AVOID:
+﻿// THINGS TO AVOID IN JAVASCRIPT:
 
 sample.log('--- DON\'TS #1 ---');
 // 1. global functions

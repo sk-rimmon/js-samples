@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h1>About</h1>
+    <p class="lead">Welcome to my showroom. This application was created for presentation my code skills in HTML, CSS, JS and ASP.NET MVC. All codes are for demonstration purposes, not for real usage in real web applications.</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Introduction to JavaScript</h2>
+        <p>
+            A piece of javascript code that shows all javascript's beauty, best practises, what to use and how to use. This is must read for C# developers which come to 
+            first contact with JavaScript to avoid some common mistakes all C# developers are doing during the first month with JavaScript.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Learning")">Jump to code &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Writing JS tests using QUnit</h2>
+        <p>
+            A sample unit tests written in QUnit for Calculator module. It's very simple calculator with two mathematical functions but that's not important here. More
+            important are the tests, what to test and how to use QUnit for it. You have multiple options how to run the tests.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("QUnit", "TestExamples")">Run tests &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Writing JS tests using Jasmine</h2>
+        <p>
+            The same tests as in QUnit article but written in Jasmine.
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Jasmine", "TestExamples")">Run tests &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Sample Angular application</h2>
+        <p>
+            Demonstration how to write SPA using Angular and Bootstrap together. It's a very simple Customer's management with basic CRUD operations. On the client side you can found:
+            <ul>
+                <li>Custom routes and routes parameters,</li>
+                <li>Custom pageable grid component,</li>
+                <li>Custom directives,</li>
+                <li>Custom modal dialogs service,</li>
+            </ul>
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Angular")">Jump to app &raquo;</a></p>
+    </div>
+</div>

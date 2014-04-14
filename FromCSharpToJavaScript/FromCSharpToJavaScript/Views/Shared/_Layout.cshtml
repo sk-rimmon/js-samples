@@ -7,8 +7,10 @@
     @Styles.Render("~/themes/default")
     @RenderSection("styles", required: false)
 </head>
-    <body class="container-fluid">
+    <body class="container container-fluid">
+        @Html.Partial("_Header")
         @RenderBody()
+        @Html.Partial("_Footer")
         @Scripts.Render("~/js/jquery")
         @Scripts.Render("~/js/bootstrap")
         @RenderSection("scripts", required: false)

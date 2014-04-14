@@ -1,5 +1,5 @@
-﻿/// <reference path="qunit-1.14.0.js"/>
-/// <reference path="../components/calculator.js"/>
+﻿/// <reference path="../qunit-1.14.0.js"/>
+/// <reference path="calculator.js"/>
 
 // calculator tests written in qunit.
 // how to run:
