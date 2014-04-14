@@ -28,6 +28,20 @@ namespace FromCSharpToJavaScript
             bundles.Add(new ScriptBundle("~/js/jasmine").Include("~/Scripts/components/calculator.js", "~/Scripts/jasmine/jasmine.js",
                 "~/Scripts/jasmine/jasmine-html.js", "~/Scripts/jasmine/boot.js", "~/Scripts/components/calculator.tests.jasmine.js"));
 
+            // angular
+            bundles.Add(new ScriptBundle("~/js/angular").Include("~/Scripts/angular/angular.js", "~/Scripts/angular/angular-cookies.js",
+                "~/Scripts/angular/angular-loader.js", "~/Scripts/angular/angular-route.js", "~/Scripts/angular/angular-bootstrap.js"));
+            
+            // angular-app
+            bundles.Add(new ScriptBundle("~/js/angular-app").Include("~/Scripts/angular-app/app.init.js", "~/Scripts/angular-app/app.ajax.js",
+                "~/Scripts/angular-app/app.console.js", "~/Scripts/angular-app/app.csrf.js", "~/Scripts/angular-app/app.debug.js", "~/Scripts/angular-app/app.defaults.js",
+                "~/Scripts/angular-app/app.dialogs.js", "~/Scripts/angular-app/app.forms.js", "~/Scripts/angular-app/app.grids.js", "~/Scripts/angular-app/app.mvc.js",
+                "~/Scripts/angular-app/app.screen.js"));
+
+            // angular-app assets
+            bundles.Add(new ScriptBundle("~/js/angular-app/assets").Include("~/Scripts/angular-app/customers/config.js", "~/Scripts/angular-app/customers/controllers.js",
+                "~/Scripts/angular-app/customers/services.js"));
+
             // themes
             bundles.Add(new StyleBundle("~/themes/default").Include("~/Themes/default/reset.css", "~/Themes/default/bootstrap.css", "~/Themes/default/pages.css"));
 

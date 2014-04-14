@@ -1,0 +1,61 @@
+﻿@model FromCSharpToJavaScript.Models.CustomerModel
+
+<div class="panel panel-default grid-wrapper">
+    <div class="panel-heading"><h4>List of customers</h4></div>
+    <div class="panel-body">
+        <label for="filter">Filter</label>
+        <div class="input-group col-xs-6">
+            <input type="text" class="form-control" id="filter" placeholder="type a name, email or city" data-ng-model="$grid.$filter">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" data-ng-click="$grid.search()">Search</button>
+            </span>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover table-condensed grid" data-bind="onDataBind(page, size, filter, sort)" data-bound="onDataBound(data, total, page)" data-select="onRowSelected(data, row)" data-double-click="onRowDoubleClick(data, row)">
+            <thead>
+                <tr>
+                    <th data-grid-order="@Html.NameFor(m => m.FirstName)">@Html.DisplayNameFor(m => m.FirstName)</th>
+                    <th data-grid-order="@Html.NameFor(m => m.LastName)">@Html.DisplayNameFor(m => m.LastName)</th>
+                    <th data-grid-order="@Html.NameFor(m => m.Email)">@Html.DisplayNameFor(m => m.Email)</th>
+                    <th data-grid-order="@Html.NameFor(m => m.City)">@Html.DisplayNameFor(m => m.City)</th>
+                    <th>@Html.DisplayNameFor(m => m.NumberOfOrders)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-hide="$grid.$curtain || $grid.$data.length">
+                    <td colspan="5">
+                        No data found.
+                    </td>
+                </tr>
+                <tr data-ng-repeat="$row in $grid.$data" data-ng-click="onClick($index, $event)" data-ng-dblclick="onDoubleClick($index, $event)" data-ng-class="{ 'info': $index === $grid.$selectedRowIndex }">
+                    <td>{{@Html.JsPropertyName("$row", m => m.FirstName) | date:'shortDate'}}</td>
+                    <td>{{@Html.JsPropertyName("$row", m => m.LastName)}}</td>
+                    <td>{{@Html.JsPropertyName("$row", m => m.Email)}}</td>
+                    <td>{{@Html.JsPropertyName("$row", m => m.City)}}</td>
+                    <td>{{@Html.JsPropertyName("$row", m => m.NumberOfOrders)}}</td>
+                </tr>
+            </tbody>
+            <tfoot data-ng-show="$grid.$total || $grid.$curtain">
+                <tr data-ng-show="$grid.$curtain">
+                    <td colspan="5">
+                        <div class="progress progress-striped active">
+                            <div class="progress-bar progress-bar-warning">
+                                <span>Working</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr data-ng-hide="$grid.$curtain">
+                    <td colspan="5">
+                        <div class="pagination-sm" data-pagination="" data-total-items="$grid.$total" data-page="$grid.$page" data-max-size="5" data-boundary-links="true" data-on-select-page="$grid.selectPage(page)" data-previous-text="<" data-next-text=">" data-first-text="<<" data-last-text=">>"></div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-default" href="#/new">Create</a>
+        <button class="btn btn-default pull-right" data-ng-disabled="!$grid.$selectedRow" data-ng-click="onDetailClicked($grid.$selectedRow)">Detail</button>
+    </div>
+</div>

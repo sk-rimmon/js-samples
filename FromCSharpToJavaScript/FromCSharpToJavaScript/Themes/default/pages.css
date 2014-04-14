@@ -1,3 +1,12 @@
 body {
   padding-top: 90px;
 }
+.grid thead a {
+  cursor: pointer;
+}
+.grid tbody tr {
+  cursor: pointer;
+}
+.grid tfoot .pagination {
+  margin: 0;
+}

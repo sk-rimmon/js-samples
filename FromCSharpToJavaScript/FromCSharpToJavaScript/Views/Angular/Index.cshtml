@@ -1,4 +1,14 @@
 ﻿@{
-    ViewBag.Title = "Home";
+    ViewBag.Title = "CRM";
 }
-<h1>CRM</h1>
+<div>
+    <h1>CRM</h1>
+    
+    <div data-ng-view=""></div>
+</div>
+@section scripts
+{
+    @Scripts.Render("~/js/angular")
+    @Scripts.Render("~/js/angular-app")
+    @Scripts.Render("~/js/angular-app/assets")
+}

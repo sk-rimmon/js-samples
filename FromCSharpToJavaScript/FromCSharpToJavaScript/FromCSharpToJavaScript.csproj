@@ -106,12 +106,51 @@
     <Compile Include="Application\MvcApplicationController.cs" />
     <Compile Include="Application\Routes.cs" />
     <Compile Include="Controllers\AngularController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Helpers\CustomJsonResult.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
+    <Compile Include="Helpers\NewtonsoftJavaScriptCamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="Helpers\SortItem.cs" />
+    <Compile Include="Model\CustomerModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LearningController.cs" />
     <Compile Include="Controllers\TestExamplesController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\angular-app\app.ajax.js" />
+    <Content Include="Scripts\angular-app\app.console.js" />
+    <Content Include="Scripts\angular-app\app.csrf.js" />
+    <Content Include="Scripts\angular-app\app.debug.js" />
+    <Content Include="Scripts\angular-app\app.defaults.js" />
+    <Content Include="Scripts\angular-app\app.dialogs.js" />
+    <Content Include="Scripts\angular-app\app.forms.js" />
+    <Content Include="Scripts\angular-app\app.grids.js" />
+    <Content Include="Scripts\angular-app\app.init.js" />
+    <Content Include="Scripts\angular-app\app.mvc.js" />
+    <Content Include="Scripts\angular-app\app.screen.js" />
+    <Content Include="Scripts\angular-app\customers\config.js" />
+    <Content Include="Scripts\angular-app\customers\controllers.js" />
+    <Content Include="Scripts\angular-app\customers\services.js" />
+    <Content Include="Scripts\angular\angular-animate.js" />
+    <Content Include="Scripts\angular\angular-animate.min.js" />
+    <Content Include="Scripts\angular\angular-bootstrap.js" />
+    <Content Include="Scripts\angular\angular-cookies.js" />
+    <Content Include="Scripts\angular\angular-cookies.min.js" />
+    <Content Include="Scripts\angular\angular-loader.js" />
+    <Content Include="Scripts\angular\angular-loader.min.js" />
+    <Content Include="Scripts\angular\angular-mocks.js" />
+    <Content Include="Scripts\angular\angular-resource.js" />
+    <Content Include="Scripts\angular\angular-resource.min.js" />
+    <Content Include="Scripts\angular\angular-route.js" />
+    <Content Include="Scripts\angular\angular-route.min.js" />
+    <Content Include="Scripts\angular\angular-sanitize.js" />
+    <Content Include="Scripts\angular\angular-sanitize.min.js" />
+    <Content Include="Scripts\angular\angular-scenario.js" />
+    <Content Include="Scripts\angular\angular-touch.js" />
+    <Content Include="Scripts\angular\angular-touch.min.js" />
+    <Content Include="Scripts\angular\angular.js" />
+    <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\components\calculator.js" />
     <Content Include="Scripts\jasmine\boot.js" />
     <Content Include="Scripts\components\calculator.tests.jasmine.js" />
@@ -208,6 +247,9 @@
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
     <Content Include="Views\Angular\Index.cshtml" />
+    <Content Include="Views\Customer\_Index.cshtml" />
+    <Content Include="Views\Customer\_Detail.cshtml" />
+    <Content Include="Views\Customer\_New.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
